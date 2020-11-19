@@ -1,42 +1,36 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Основы автоматизации</title>
+<title>Форма авторизации</title>
 </head>
 <body>
-<h1>Основы автоматизации</h1>
-<p>Автоматизация тестирования - процесс тестирования ПО, при котором основные шаги теста выполняются автоматически.<br/>
-Автоматизация - это инвестиция ресурсов, с целью экономии большего числа ресурсов в дальнейшем.<br/>
-При этом автоматизация в долгосрочной перспективе снижает как расходы на тестирование, так и риски, связанные с человеческим фактором.</p>
+<h3>Заполните форму регистрации:</h3>
+<form>
+<p>
+<label for="loginName">Логин </label>
+<input id="loginName" type="text"></input>
+</p>
+<p>
+<label>Пароль <input type="password"></input></label>
+ <button type="text">Проверить пароль</button>
+</p>
+<p>
+<label>Электронная почта <input type="email"></input></label>
+</p>
+<p>
+<label>Город <select><option>Новосибирск</option><option>Москва</option></select></label>
+</p>
+<p>
+<label>Пол <input type="radio" value="М" name="myRadio">М</input>  <input type="radio" value="Ж" name="myRadio">Ж</input></label>
+</p>
+<p>
+<input type="checkbox"/><label>Я согласен(-на) с условиями регистрации</label>
+</p>
 <hr/>
-<p>Плюсы автоматизации:</p>
-<ul>
-<li>Повторяемость;</li>
-<li>Быстрое выполнение;</li>
-<li>Меньшие затраты на поддержку.</li>
-</ul>
-<h4>Основы автоматизации</h4>
- <table border="1">
- <tr>
- <th>Виды автотестов</th>
- <th>Методология</th>
- </tr>
- <tr>
- <td>Unit-тесты</td>
- <td>Data Driven Testing</td>
- </tr>
- <tr>
- <td>API-тесты</td>
- <td>Behavior Driven Testing</td>
- </tr>
- <tr>
- <td>UI-тесты</td>
- <td>Keyword Driven Testing</td>
- </tr>
- </table>
- <p>Всегда надо помнить, что <a target="_blank"href="https://www.google.ru/?gws_rd=ssl">Google</a> поможет.</p>
- 
- 
- 
- 
+<p>
+<button type="submit">Регистрация</button>
+</p>
+</form>
+ </body>
+ </html>
  
