@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+	<title>test_login</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">success_authorization</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://academ-it.ru/mantisbt/login_page.php<datalist><option>https://academ-it.ru/mantisbt/login_page.php</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=username<datalist><option>id=username</option><option>name=username</option><option>//input[@id='username']</option><option>//form[@id='login-form']/fieldset/label/span/input</option><option>//span/input</option><option>css=#username</option></datalist></td><td>admin</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Войти']<datalist><option>//input[@value='Войти']</option><option>//form[@id='login-form']/fieldset/input[2]</option><option>//input[2]</option><option>css=input.width-40.pull-right.btn.btn-success.btn-inverse.bigger-110</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=password<datalist><option>id=password</option><option>name=password</option><option>//input[@id='password']</option><option>//form[@id='login-form']/fieldset/label/span/input</option><option>//span/input</option><option>css=#password</option></datalist></td><td>admin20</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Войти']<datalist><option>//input[@value='Войти']</option><option>//form[@id='login-form']/fieldset/input[3]</option><option>//input[3]</option><option>css=input.width-40.pull-right.btn.btn-success.btn-inverse.bigger-110</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyText</td><td>//div[@id='breadcrumbs']/ul/li/span<datalist><option>//div[@id='breadcrumbs']/ul/li/span</option><option>//li/span</option><option>css=span.label.hidden-xs.label-default.arrowed</option></datalist></td><td>администратор</td>
+</tr>
+<tr><td>verifyText</td><td>//div[@id='breadcrumbs']/ul/li/a<datalist><option>//a[contains(text(),'admin')]</option><option>//div[@id='breadcrumbs']/ul/li/a</option><option>xpath=(//a[contains(@href, '/mantisbt/account_page.php')])[2]</option><option>//div[2]/div[2]/div/ul/li/a</option><option>css=ul.breadcrumb &gt; li &gt; a</option></datalist></td><td>admin</td>
+</tr>
+<tr><td>verifyLocation</td><td>https://academ-it.ru/mantisbt/my_view_page.php<datalist><option>https://academ-it.ru/mantisbt/my_view_page.php</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=выход<datalist><option>link=выход</option><option>//a[contains(text(),'выход')]</option><option>//div[@id='navbar-container']/div[2]/ul/li[2]/ul/li[4]/a</option><option>//a[contains(@href, '/mantisbt/logout_page.php')]</option><option>//li[4]/a</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">not_valid_login</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://academ-it.ru/mantisbt/login_page.php<datalist><option>https://academ-it.ru/mantisbt/login_page.php</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=username<datalist><option>id=username</option><option>name=username</option><option>//input[@id='username']</option><option>//form[@id='login-form']/fieldset/label/span/input</option><option>//span/input</option><option>css=#username</option></datalist></td><td>atmin</td>
+</tr>
+<tr><td>submit</td><td>id=login-form<datalist><option>id=login-form</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=password<datalist><option>id=password</option><option>name=password</option><option>//input[@id='password']</option><option>//form[@id='login-form']/fieldset/label/span/input</option><option>//span/input</option><option>css=#password</option></datalist></td><td>admin20</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Войти']<datalist><option>//input[@value='Войти']</option><option>//form[@id='login-form']/fieldset/input[3]</option><option>//input[3]</option><option>css=input.width-40.pull-right.btn.btn-success.btn-inverse.bigger-110</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyText</td><td>css=p<datalist><option>//div[@id='main-container']/div/div/div/div/div[4]/p</option><option>//p</option><option>css=p</option></datalist></td><td>Возможно, ваша учетная запись заблокирована, или введенное регистрационное имя/пароль неправильны.</td>
+</tr>
+<tr><td>verifyLocation</td><td>https://academ-it.ru/mantisbt/login_page.php?error=1&amp;username=atmin&amp;return=index.php&amp;secure_session=1<datalist><option>https://academ-it.ru/mantisbt/login_page.php?error=1&amp;username=atmin&amp;return=index.php&amp;secure_session=1</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">not_valid_password</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://academ-it.ru/mantisbt/login_page.php<datalist><option>https://academ-it.ru/mantisbt/login_page.php</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=username<datalist><option>id=username</option><option>name=username</option><option>//input[@id='username']</option><option>//form[@id='login-form']/fieldset/label/span/input</option><option>//span/input</option><option>css=#username</option></datalist></td><td>admin</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Войти']<datalist><option>//input[@value='Войти']</option><option>//form[@id='login-form']/fieldset/input[2]</option><option>//input[2]</option><option>css=input.width-40.pull-right.btn.btn-success.btn-inverse.bigger-110</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=password<datalist><option>id=password</option><option>name=password</option><option>//input[@id='password']</option><option>//form[@id='login-form']/fieldset/label/span/input</option><option>//span/input</option><option>css=#password</option></datalist></td><td>admin10</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Войти']<datalist><option>//input[@value='Войти']</option><option>//form[@id='login-form']/fieldset/input[3]</option><option>//input[3]</option><option>css=input.width-40.pull-right.btn.btn-success.btn-inverse.bigger-110</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyText</td><td>css=div.alert.alert-danger<datalist><option>//div[@id='main-container']/div/div/div/div/div[4]</option><option>//div[4]</option><option>css=div.alert.alert-danger</option></datalist></td><td>Возможно, ваша учетная запись заблокирована, или введенное регистрационное имя/пароль неправильны.</td>
+</tr>
+<tr><td>verifyLocation</td><td>https://academ-it.ru/mantisbt/login_page.php?error=1&amp;username=admin&amp;return=index.php&amp;secure_session=1<datalist><option>https://academ-it.ru/mantisbt/login_page.php?error=1&amp;username=admin&amp;return=index.php&amp;secure_session=1</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
