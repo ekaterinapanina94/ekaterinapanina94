@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "229e7b40-0e33-4c2d-a950-7704cb3e5dd6",
+		"name": "weather",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get_cityId",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "db7d915a-d215-4718-b3b1-f918cdc26bf2",
+						"exec": [
+							"pm.environment.set(\"cityId\", pm.response.json().id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "query",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "4e095f0c5eebbb6cea4d7ba49d12b843",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "APPID",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.openweathermap.org/data/2.5/weather?q={{city_name}}&lang=ru",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "{{city_name}}"
+						},
+						{
+							"key": "lang",
+							"value": "ru"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_name_city",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "query",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "4e095f0c5eebbb6cea4d7ba49d12b843",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "APPID",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.openweathermap.org/data/2.5/weather?id={{cityId}}&lang=ru&units=metric&APPID=4e095f0c5eebbb6cea4d7ba49d12b843",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{cityId}}"
+						},
+						{
+							"key": "lang",
+							"value": "ru"
+						},
+						{
+							"key": "units",
+							"value": "metric"
+						},
+						{
+							"key": "APPID",
+							"value": "4e095f0c5eebbb6cea4d7ba49d12b843"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "39aab042-9ec1-42cb-bf67-a83b57030280",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "f8ebf70a-674a-40a3-8e65-8ade9335061c",
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status is ok, response is json\", function () {",
+					"pm.response.to.be.ok;",
+					"pm.response.to.be.json;",
+					"});"
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
