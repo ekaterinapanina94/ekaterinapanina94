@@ -136,13 +136,9 @@
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">not_success_search_task</td></tr>
+<tr><td rowspan="1" colspan="3">not_success_search</td></tr>
 </thead>
 <tbody>
-<tr><td>store</td><td>Неуспешный поиск задачи<datalist><option>Неуспешный поиск задачи</option></datalist></td><td>summary</td>
-</tr>
-<tr><td>store</td><td>Описание<datalist><option>Описание</option></datalist></td><td>description</td>
-</tr>
 <tr><td>open</td><td>https://academ-it.ru/mantisbt/login_page.php<datalist><option>https://academ-it.ru/mantisbt/login_page.php</option></datalist></td><td></td>
 </tr>
 <tr><td>type</td><td>id=username<datalist><option>id=username</option><option>name=username</option><option>//input[@id='username']</option><option>//form[@id='login-form']/fieldset/label/span/input</option><option>//span/input</option><option>css=#username</option></datalist></td><td>admin</td>
@@ -153,33 +149,15 @@
 </tr>
 <tr><td>click</td><td>//input[@value='Войти']<datalist><option>//input[@value='Войти']</option><option>//form[@id='login-form']/fieldset/input[3]</option><option>//input[3]</option><option>css=input.width-40.pull-right.btn.btn-success.btn-inverse.bigger-110</option></datalist></td><td></td>
 </tr>
-<tr><td>click</td><td>//div[@id='sidebar']/ul/li[3]/a/i<datalist><option>//div[@id='sidebar']/ul/li[3]/a/i</option><option>//li[3]/a/i</option><option>css=i.menu-icon.fa.fa-edit</option></datalist></td><td></td>
-</tr>
-<tr><td>click</td><td>id=summary<datalist><option>id=summary</option><option>name=summary</option><option>//input[@id='summary']</option><option>//form[@id='report_bug_form']/div/div[2]/div/div/table/tbody/tr[7]/td/input</option><option>//td/input</option><option>css=#summary</option></datalist></td><td></td>
-</tr>
-<tr><td>type</td><td>id=summary<datalist><option>id=summary</option><option>name=summary</option><option>//input[@id='summary']</option><option>//form[@id='report_bug_form']/div/div[2]/div/div/table/tbody/tr[7]/td/input</option><option>//td/input</option><option>css=#summary</option></datalist></td><td>${summary}</td>
-</tr>
-<tr><td>click</td><td>id=description<datalist><option>id=description</option><option>name=description</option><option>//textarea[@id='description']</option><option>//form[@id='report_bug_form']/div/div[2]/div/div/table/tbody/tr[8]/td/textarea</option><option>//textarea</option><option>css=#description</option></datalist></td><td></td>
-</tr>
-<tr><td>type</td><td>id=description<datalist><option>id=description</option><option>name=description</option><option>//textarea[@id='description']</option><option>//form[@id='report_bug_form']/div/div[2]/div/div/table/tbody/tr[8]/td/textarea</option><option>//textarea</option><option>css=#description</option></datalist></td><td>${description}</td>
-</tr>
-<tr><td>click</td><td>//input[@value='Создать задачу']<datalist><option>//input[@value='Создать задачу']</option><option>//form[@id='report_bug_form']/div/div[2]/div[2]/input</option><option>//div[2]/input</option><option>css=input.btn.btn-primary.btn-white.btn-round</option></datalist></td><td></td>
-</tr>
-<tr><td>click</td><td>link=Просмотреть созданную задачу *<datalist><option>link=0026484</option><option>//a[contains(text(),'0026484')]</option><option>//table[@id='buglist']/tbody/tr/td[4]/a</option><option>//a[contains(@href, '/mantisbt/view.php?id=26484')]</option><option>//div[2]/div/table/tbody/tr/td[4]/a</option><option>css=td.column-id &gt; a</option><option>link=Просмотреть созданную задачу *</option></datalist></td><td></td>
-</tr>
-<tr><td>click</td><td>css=td.bug-id<datalist><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tbody/tr[2]/td</option><option>//tr[2]/td</option><option>css=td.bug-id</option></datalist></td><td></td>
-</tr>
-<tr><td>click</td><td>//div[@id='sidebar']/ul/li/a/i<datalist><option>//div[@id='sidebar']/ul/li/a/i</option><option>//div[2]/div/ul/li/a/i</option><option>css=i.menu-icon.fa.fa-dashboard</option></datalist></td><td></td>
-</tr>
 <tr><td>click</td><td>name=bug_id<datalist><option>name=bug_id</option><option>//input[@name='bug_id']</option><option>//div[@id='nav-search']/form/span/input</option><option>//input</option><option>css=input[name="bug_id"]</option></datalist></td><td></td>
 </tr>
-<tr><td>type</td><td>name=bug_id<datalist><option>name=bug_id</option><option>//input[@name='bug_id']</option><option>//div[@id='nav-search']/form/span/input</option><option>//input</option><option>css=input[name="bug_id"]</option></datalist></td><td>000000</td>
+<tr><td>type</td><td>name=bug_id<datalist><option>name=bug_id</option><option>//input[@name='bug_id']</option><option>//div[@id='nav-search']/form/span/input</option><option>//input</option><option>css=input[name="bug_id"]</option></datalist></td><td>0</td>
 </tr>
 <tr><td>sendKeys</td><td>name=bug_id<datalist><option>name=bug_id</option><option>//input[@name='bug_id']</option><option>//div[@id='nav-search']/form/span/input</option><option>//input</option><option>css=input[name="bug_id"]</option></datalist></td><td>${KEY_ENTER}</td>
 </tr>
-<tr><td>verifyText</td><td>//div[@id='main-container']/div[2]/div[2]/div/div/div[2]/p[2]<datalist><option>//div[@id='main-container']/div[2]/div[2]/div/div/div[2]/p[2]</option><option>//p[2]</option></datalist></td><td>Задача 0 не найдена.</td>
+<tr><td>verifyText</td><td>//p[2]<datalist><option>//div[@id='main-container']/div[2]/div[2]/div/div/div[2]/p[2]</option><option>//p[2]</option></datalist></td><td>Задача 0 не найдена.</td>
 </tr>
-<tr><td>verifyLocation</td><td>https://academ-it.ru/mantisbt/view.php?id=0<datalist><option>//div[@id='navbar-container']/div[2]/ul/li[2]/a/span</option><option>//li[2]/a/span</option><option>css=span.user-info</option><option>https://academ-it.ru/mantisbt/view.php?id=0</option></datalist></td><td></td>
+<tr><td>click</td><td>//div[@id='navbar-container']/div[2]/ul/li[2]/a/i[2]<datalist><option>//div[@id='navbar-container']/div[2]/ul/li[2]/a/i[2]</option><option>//i[2]</option><option>css=i.ace-icon.fa.fa-angle-down</option></datalist></td><td></td>
 </tr>
 <tr><td>click</td><td>link=выход<datalist><option>link=выход</option><option>//a[contains(text(),'выход')]</option><option>//div[@id='navbar-container']/div[2]/ul/li[2]/ul/li[4]/a</option><option>//a[contains(@href, '/mantisbt/logout_page.php')]</option><option>//li[4]/a</option></datalist></td><td></td>
 </tr>
@@ -236,7 +214,7 @@
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">delition</td></tr>
+<tr><td rowspan="1" colspan="3">delition_task</td></tr>
 </thead>
 <tbody>
 <tr><td>store</td><td>Удаление<datalist><option>Удаление</option></datalist></td><td>summary</td>
@@ -265,7 +243,7 @@
 </tr>
 <tr><td>click</td><td>//input[@value='Создать задачу']<datalist><option>//input[@value='Создать задачу']</option><option>//form[@id='report_bug_form']/div/div[2]/div[2]/input</option><option>//div[2]/input</option><option>css=input.btn.btn-primary.btn-white.btn-round</option></datalist></td><td></td>
 </tr>
-<tr><td>click</td><td>link=Просмотреть созданную задачу *<datalist><option>link=Просмотреть созданную задачу *</option></datalist></td><td></td>
+<tr><td>click</td><td>link=Просмотреть созданную задачу *<datalist><option>xpath=(//a[contains(text(),'0026725')])[2]</option><option>//table[@id='buglist']/tbody/tr/td[4]/a</option><option>xpath=(//a[contains(@href, '/mantisbt/view.php?id=26725')])[2]</option><option>//div[2]/div/table/tbody/tr/td[4]/a</option><option>css=td.column-id &gt; a</option><option>link=Просмотреть созданную задачу *</option></datalist></td><td></td>
 </tr>
 <tr><td>click</td><td>//input[@value='Удалить']<datalist><option>//input[@value='Удалить']</option><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tfoot/tr/td/div/div[10]/form/fieldset/input[3]</option><option>//div[10]/form/fieldset/input[3]</option></datalist></td><td></td>
 </tr>
@@ -273,11 +251,11 @@
 </tr>
 <tr><td>click</td><td>name=bug_id<datalist><option>name=bug_id</option><option>//input[@name='bug_id']</option><option>//div[@id='nav-search']/form/span/input</option><option>//input</option><option>css=input[name="bug_id"]</option></datalist></td><td></td>
 </tr>
-<tr><td>type</td><td>css=input[name="bug_id"]<datalist><option>name=bug_id</option><option>//input[@name='bug_id']</option><option>//div[@id='nav-search']/form/span/input</option><option>//input</option><option>css=input[name="bug_id"]</option></datalist></td><td>${bug_id}</td>
+<tr><td>type</td><td>name=bug_id<datalist><option>name=bug_id</option><option>//input[@name='bug_id']</option><option>//div[@id='nav-search']/form/span/input</option><option>//input</option><option>css=input[name="bug_id"]</option></datalist></td><td>${bug_id}</td>
 </tr>
 <tr><td>sendKeys</td><td>name=bug_id<datalist><option>name=bug_id</option><option>//input[@name='bug_id']</option><option>//div[@id='nav-search']/form/span/input</option><option>//input</option><option>css=input[name="bug_id"]</option></datalist></td><td>${KEY_ENTER}</td>
 </tr>
-<tr><td>click</td><td>//div[@id='main-container']/div[2]/div[2]/div/div/div[2]/p<datalist><option>//div[@id='main-container']/div[2]/div[2]/div/div/div[2]/p</option><option>//p</option><option>css=p.bold</option></datalist></td><td></td>
+<tr><td>click</td><td>//div[@id='main-container']/div[2]/div[2]/div/div/div[2]/p<datalist><option>//div[@id='main-container']/div[2]/div[2]/div/div/div[2]/p</option><option>//p</option><option>css=p.bold</option></datalist></td><td>APPLICATION ERROR #1100</td>
 </tr>
 <tr><td>click</td><td>//div[@id='navbar-container']/div[2]/ul/li[2]/a/span<datalist><option>//div[@id='navbar-container']/div[2]/ul/li[2]/a/span</option><option>//li[2]/a/span</option><option>css=span.user-info</option></datalist></td><td></td>
 </tr>
@@ -321,9 +299,11 @@
 </tr>
 <tr><td>click</td><td>//input[@value='Создать задачу']<datalist><option>//input[@value='Создать задачу']</option><option>//form[@id='report_bug_form']/div/div[2]/div[2]/input</option><option>//div[2]/input</option><option>css=input.btn.btn-primary.btn-white.btn-round</option></datalist></td><td></td>
 </tr>
-<tr><td>verifyText</td><td>//table[@id='buglist']/tbody/tr[3]/td[11]<datalist><option>//table[@id='buglist']/tbody/tr[3]/td[11]</option><option>//tr[3]/td[11]</option></datalist></td><td>${summary}</td>
+<tr><td>click</td><td>link=Просмотреть созданную задачу *<datalist><option>link=Просмотреть созданную задачу *</option></datalist></td><td></td>
 </tr>
-<tr><td>verifyText</td><td>//table[@id='buglist']/tbody/tr[4]/td[11]<datalist><option>//table[@id='buglist']/tbody/tr[4]/td[11]</option><option>//tr[4]/td[11]</option></datalist></td><td>${summary}</td>
+<tr><td>verifyText</td><td>css=td.bug-summary<datalist><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tbody/tr[10]/td</option><option>//tr[10]/td</option><option>css=td.bug-summary</option></datalist></td><td>*: Клонирование</td>
+</tr>
+<tr><td>verifyText</td><td>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tbody/tr[11]/td<datalist><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tbody/tr[11]/td</option><option>//tr[11]/td</option><option>css=td.bug-description</option></datalist></td><td>${description}</td>
 </tr>
 <tr><td>click</td><td>//div[@id='navbar-container']/div[2]/ul/li[2]/a/span<datalist><option>//div[@id='navbar-container']/div[2]/ul/li[2]/a/span</option><option>//li[2]/a/span</option><option>css=span.user-info</option></datalist></td><td></td>
 </tr>
